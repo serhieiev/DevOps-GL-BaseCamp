@@ -2,7 +2,7 @@
 
 ### Visualisation:
 
-![LB-RG](https://user-images.githubusercontent.com/12089303/206738524-d5c41502-20c0-42e8-a11a-43194a7783ad.png)
+![LB-RG](https://user-images.githubusercontent.com/12089303/206739010-161319fc-6777-4db2-82a0-b8e5aef75330.png)
 
 ### Demo:
 
