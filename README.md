@@ -62,8 +62,9 @@ public_subnet_cidr_1 =
 ## _Post installation_
 
 - Make sure `terraform apply` command is executed successfully like:
-  `Apply complete! Resources: 8 added, 0 changed, 0 destroyed.`
+`Apply complete! Resources: 8 added, 0 changed, 0 destroyed.`
 - Review the `Outputs` section and copy the `external_ip` value
 - Paste copied value into the browser and make sure WordPress configuration is promted like on the screenshot below:
 <img width="828" alt="WordPress_Installation" src="https://user-images.githubusercontent.com/12089303/209408508-dbd51652-c9eb-4614-98e2-ec4298a06717.png">
+
 - Optionally: ssh into VM and perform `cat /tmp/creds.txt` to obtaint generated passwords
