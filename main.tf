@@ -1,7 +1,7 @@
 terraform {
   required_version = ">= 1.3.0"
   backend "gcs" {
-    bucket = "serhieiev-tf-state"
+    bucket = ""
     prefix = "terraform/state"
   }
 }
