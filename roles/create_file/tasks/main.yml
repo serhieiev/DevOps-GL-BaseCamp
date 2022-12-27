@@ -1,0 +1,10 @@
+---
+- name: Create a new empty file with permissions
+  file:
+    path: "/etc/iaac"
+    state: touch
+    owner: root
+    group: root
+    mode: 0500
+  become: yes  
+  become_user: root
