@@ -35,5 +35,11 @@ Optional:
 ## Testing
 
 Testing was done with AWS EC2 instances.
+
 File `group_vars/all.yml` is encrypted for demo purposes.
+
 The results of execution `ansible-playbook playbook.yml --ask-vault-pass` can be found on the scrennshot below:
+
+<img width="647" alt="gl-hw5" src="https://user-images.githubusercontent.com/12089303/209735454-6753fb17-8a3a-4674-890a-8d9249a9e0bd.png">
+
+
