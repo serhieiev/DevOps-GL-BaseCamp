@@ -1,4 +1,4 @@
-### GL Homework 7
+# GL Homework 7
 ## Requirements
 
 ```                                                                                                              
@@ -30,5 +30,5 @@ There are two roles:
  - harden_non_pam that use regexp to adjust `/etc/pam.d/common-password` file in order to harden users’ passwords
 
 
-The results of execution `ansible-playbook playbook.yml` can be found on the [asciinema](https://asciinema.org/a/552387)
+The results of execution `ansible-playbook playbook.yml` can be found on the asciinema: https://asciinema.org/a/552387
 
