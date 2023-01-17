@@ -1,0 +1,21 @@
+---
+- name: Install pwquality package
+  apt:
+    name: 
+    - libpam-pwquality
+    - cracklib-runtime
+    state: present
+  become: yes
+  become_method: sudo
+  
+- name: Update PAM configuration with pwquality
+  community.general.pamd:
+    name: common-password
+    type: password
+    control: requisite
+    module_path: pam_pwquality.so
+    module_arguments: "usercheck=1 enforce_for_root"
+    state: args_present
+  become: yes
+  become_method: sudo
+  

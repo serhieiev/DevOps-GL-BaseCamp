@@ -1,0 +1,20 @@
+---
+- name: Install pwquality package
+  apt:
+    name: 
+    - libpam-pwquality
+    - cracklib-runtime
+    state: present
+  become: yes
+  become_method: sudo
+  
+- name: Update pam password rules using regexp
+  ansible.builtin.lineinfile:
+    path: /etc/pam.d/common-password
+    regexp: "pam_pwquality.so"
+    line: "password   requisite   pam_pwquality.so enforce_for_root usercheck=1"
+    owner: root
+    group: root
+    mode: "0644"
+  become: yes
+  become_method: sudo
