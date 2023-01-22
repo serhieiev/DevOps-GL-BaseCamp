@@ -6,10 +6,10 @@ jenkins:
        - id: ${JENKINS_ADMIN_ID}
          password: ${JENKINS_ADMIN_PASSWORD}
   authorizationStrategy:
-      globalMatrix:
-        permissions:
-          - "Overall/Administer:admin"
-          - "Overall/Read:authenticated"
+    globalMatrix:
+      permissions:
+        - "USER:Overall/Administer:admin"
+        - "GROUP:Overall/Read:authenticated"
   security:
     queueItemAuthenticator:
       authenticators:
