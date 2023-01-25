@@ -27,6 +27,23 @@ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable"
 
 
-# install Docker
+# install Docker CE
 sudo apt -y install docker-ce
+
+# download Dockerfile
+sudo curl -LJO https://raw.githubusercontent.com/serhieiev/gl-hw10/main/docker_task_1/Dockerfile
 ```
+
+### Prepare a dockerfile based on Apache or Nginx image
+
+### Added your own index.html page with your name and surname to the docker image
+
+### Run the docker container at port 8080
+Build the Dockerfile using the `docker build` command and give it a customized name:
+
+`sudo docker build -t apache_image:1.0 .`
+
+Run the Docker image as a container in detached mode so that it runs continuously in the background:
+`sudo docker run --name apache_server -d -p 8080:80 apache_image:1.0`
+
+### Open page in Web Browser

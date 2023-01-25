@@ -10,9 +10,8 @@ ENV APACHE_RUN_GROUP www-data
 ENV APACHE_LOG_DIR /var/log/apache2
 ENV APACHE_RUN_DIR /var/www/html
 
-RUN echo 'Maksym Serhieiev' > /var/www/index.html
-RUN sed '/Listen/{s/\([0-9]\+\)/8080/; :a;n; ba}' /etc/apache2/ports.conf
+RUN echo 'Maksym Serhieiev' > /var/www/html/index.html
 
-EXPOSE 8080
+EXPOSE 80
 ENTRYPOINT ["/usr/sbin/apache2"]
 CMD ["-D", "FOREGROUND"]
