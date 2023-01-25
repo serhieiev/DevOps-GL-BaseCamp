@@ -35,15 +35,21 @@ sudo curl -LJO https://raw.githubusercontent.com/serhieiev/gl-hw10/main/docker_t
 ```
 
 ### Prepare a dockerfile based on Apache or Nginx image
+Done! Please have a look on the attached Dockerfile with corresponding comments:
 
 ### Added your own index.html page with your name and surname to the docker image
+Done!
 
 ### Run the docker container at port 8080
 Build the Dockerfile using the `docker build` command and give it a customized name:
 
 `sudo docker build -t apache_image:1.0 .`
 
-Run the Docker image as a container in detached mode so that it runs continuously in the background:
+Run the Docker image as a container in detached mode so that it runs continuously in the background, map the port 8080 on the host to port 80 inside the container:
+
 `sudo docker run --name apache_server -d -p 8080:80 apache_image:1.0`
 
 ### Open page in Web Browser
+
+<img width="279" alt="docker_task_1_results" src="https://user-images.githubusercontent.com/12089303/214614686-d7a064dd-fbe1-433a-840c-3ac17360b0e4.png">
+
