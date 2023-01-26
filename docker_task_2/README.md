@@ -8,6 +8,7 @@ must be in the private network
 example: google.com )
 
 B ) The second container ping the first container via a private network
+
 5. Report save in GitHub repository
 
 ## Solution
