@@ -30,13 +30,13 @@ CONTAINER ID   IMAGE     COMMAND   CREATED         STATUS         PORTS     NAME
 
 ubuntu@ip-10-0-1-40:~$ sudo docker exec -it foo sh
 / #
-/ # ping -c 2 google.com
+/ # ping -c 2 google.com  <--
 PING google.com (142.251.163.101): 56 data bytes
 64 bytes from 142.251.163.101: seq=0 ttl=94 time=1.860 ms
 64 bytes from 142.251.163.101: seq=1 ttl=94 time=1.603 ms
 
 --- google.com ping statistics ---
-2 packets transmitted, 2 packets received, 0% packet loss
+2 packets transmitted, 2 packets received, 0% packet loss  <--
 round-trip min/avg/max = 1.603/1.731/1.860 ms
 / # ping -c 2 172.19.0.2
 PING 172.19.0.2 (172.19.0.2): 56 data bytes
@@ -72,8 +72,8 @@ PING bar (172.19.0.2): 56 data bytes
 --- bar ping statistics ---
 2 packets transmitted, 2 packets received, 0% packet loss  <--
 round-trip min/avg/max = 0.107/0.120/0.133 ms
-/ # ping -c 2 172.19.0.2
-PING 172.19.0.2 (172.19.0.2): 56 data bytes  <--
+/ # ping -c 2 172.19.0.2  <--
+PING 172.19.0.2 (172.19.0.2): 56 data bytes  
 64 bytes from 172.19.0.2: seq=0 ttl=64 time=0.093 ms
 64 bytes from 172.19.0.2: seq=1 ttl=64 time=0.108 ms
 
