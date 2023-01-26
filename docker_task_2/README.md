@@ -6,6 +6,7 @@
 must be in the private network
 4. A ) Run a container that has access to the public network and ping some resources (
 example: google.com )
+
 B ) The second container ping the first container via a private network
 5. Report save in GitHub repository
 
