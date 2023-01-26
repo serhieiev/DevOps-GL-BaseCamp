@@ -1,0 +1,82 @@
+ubuntu@ip-10-0-1-40:~$ sudo docker network create public
+d0f6919754fa05c57fa138362b70e40aff769d12620198b2dad6762147759bb9
+
+ubuntu@ip-10-0-1-40:~$ sudo docker network create private --internal
+498ce4b3af67bded3e5f3f73911860f0c3c561baab42173d63ab9c836c9553b9
+
+ubuntu@ip-10-0-1-40:~$ sudo docker network ls
+NETWORK ID     NAME      DRIVER    SCOPE
+4aebdbafeca7   bridge    bridge    local
+f311cd7f9d43   host      host      local
+9bab8208cf5a   none      null      local
+498ce4b3af67   private   bridge    local  <--
+d0f6919754fa   public    bridge    local  <--
+
+ubuntu@ip-10-0-1-40:~$ sudo docker run -itd --rm --network public --name foo busybox
+Unable to find image 'busybox:latest' locally
+latest: Pulling from library/busybox
+205dae5015e7: Pull complete 
+Digest: sha256:7b3ccabffc97de872a30dfd234fd972a66d247c8cfc69b0550f276481852627c
+Status: Downloaded newer image for busybox:latest
+64527af3f82468b4f95e73eb02b94c50f6a55ea481e5a10e6ea6b8079b699b7a
+
+ubuntu@ip-10-0-1-40:~$ sudo docker run -itd --rm --network private --name bar busybox
+54eea51752d72dabaa188b6baa829cce4fa1a9474d3b1662183793d5ee483eb6
+
+ubuntu@ip-10-0-1-40:~$ sudo docker container ls
+CONTAINER ID   IMAGE     COMMAND   CREATED         STATUS         PORTS     NAMES
+54eea51752d7   busybox   "sh"      3 minutes ago   Up 3 minutes             bar
+64527af3f824   busybox   "sh"      6 minutes ago   Up 6 minutes             foo
+
+ubuntu@ip-10-0-1-40:~$ sudo docker exec -it foo sh
+/ #
+/ # ping -c 2 google.com
+PING google.com (142.251.163.101): 56 data bytes
+64 bytes from 142.251.163.101: seq=0 ttl=94 time=1.860 ms
+64 bytes from 142.251.163.101: seq=1 ttl=94 time=1.603 ms
+
+--- google.com ping statistics ---
+2 packets transmitted, 2 packets received, 0% packet loss
+round-trip min/avg/max = 1.603/1.731/1.860 ms
+/ # ping -c 2 172.19.0.2
+PING 172.19.0.2 (172.19.0.2): 56 data bytes
+^C
+--- 172.19.0.2 ping statistics ---
+2 packets transmitted, 0 packets received, 100% packet loss
+
+ubuntu@ip-10-0-1-40:~$ sudo docker exec -it bar sh
+/ #
+/ # ping -c 2 google.com  <--
+PING google.com (142.251.163.102): 56 data bytes
+^C
+--- google.com ping statistics ---
+2 packets transmitted, 0 packets received, 100% packet loss  <--
+
+ubuntu@ip-10-0-1-40:~$ sudo docker network connect private foo
+
+ubuntu@ip-10-0-1-40:~$ sudo docker exec -it foo sh
+/ #
+/ # ping -c 2 google.com
+PING google.com (142.251.163.102): 56 data bytes
+64 bytes from 142.251.163.102: seq=0 ttl=49 time=1.757 ms
+64 bytes from 142.251.163.102: seq=1 ttl=49 time=1.798 ms
+
+--- google.com ping statistics ---
+2 packets transmitted, 2 packets received, 0% packet loss
+round-trip min/avg/max = 1.757/1.777/1.798 ms
+/ # ping -c 2 bar  <--
+PING bar (172.19.0.2): 56 data bytes
+64 bytes from 172.19.0.2: seq=0 ttl=64 time=0.133 ms
+64 bytes from 172.19.0.2: seq=1 ttl=64 time=0.107 ms
+
+--- bar ping statistics ---
+2 packets transmitted, 2 packets received, 0% packet loss  <--
+round-trip min/avg/max = 0.107/0.120/0.133 ms
+/ # ping -c 2 172.19.0.2
+PING 172.19.0.2 (172.19.0.2): 56 data bytes  <--
+64 bytes from 172.19.0.2: seq=0 ttl=64 time=0.093 ms
+64 bytes from 172.19.0.2: seq=1 ttl=64 time=0.108 ms
+
+--- 172.19.0.2 ping statistics ---
+2 packets transmitted, 2 packets received, 0% packet loss  <--
+round-trip min/avg/max = 0.093/0.100/0.108 ms
