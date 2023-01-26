@@ -13,7 +13,7 @@
 The following sequence of commands can be used to install Docker CE on Ubuntu 20.04:
 
 ```
-# update existing list of packages:
+# update existing list of packages
 sudo apt update -y
 
 # install prerequisite packages
