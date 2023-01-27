@@ -38,7 +38,7 @@ sudo curl -LJO https://raw.githubusercontent.com/serhieiev/gl-hw8/main/config/pl
 sudo docker build -t jenkins:jnks .
 
 # run the new Jenkins image
-sudo docker run --name jenkins --rm -p 8080:8080 --env JENKINS_ADMIN_ID=admin --env JENKINS_ADMIN_PASSWORD=$password jenkins:jnks &
+sudo docker run --name jenkins -v jenkins-data:/var/jenkis_home -itd -p 8080:8080 --env JENKINS_ADMIN_ID=admin --env JENKINS_ADMIN_PASSWORD=$password jenkins:jnks 
 
 # Save generated Jenkins admin pass to log file.
 echo "Jenkins admin password: " $password >> pass.txt
