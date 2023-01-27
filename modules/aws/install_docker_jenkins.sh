@@ -29,7 +29,6 @@ sudo mkdir -p $HOME/docker_jenkins
 cd $HOME/docker_jenkins
 
 # download Dockerfile, casc.yaml and plugins.txt
-
 sudo curl -LJO https://raw.githubusercontent.com/serhieiev/gl-hw8/main/config/Dockerfile
 sudo curl -LJO https://raw.githubusercontent.com/serhieiev/gl-hw8/main/config/casc.yaml
 sudo curl -LJO https://raw.githubusercontent.com/serhieiev/gl-hw8/main/config/plugins.txt
