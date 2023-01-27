@@ -1,5 +1,9 @@
 blueocean:latest
 maven-plugin:latest
+slack:latest
+docker-workflow:latest
+docker:latest
+docker-pipeline:latest
 antisamy-markup-formatter:latest
 authorize-project:latest
 build-timeout:latest
