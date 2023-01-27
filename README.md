@@ -33,4 +33,10 @@ terraform init
 terraform apply
 ```
 
+## Video Demo
+
+https://user-images.githubusercontent.com/12089303/215190472-268ec272-85aa-4743-962a-ae4942ec9a4b.mp4
+
+
+
 
