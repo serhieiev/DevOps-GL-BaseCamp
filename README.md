@@ -10,7 +10,7 @@
 
 ## Requirements:
 ```
-Terraform v1.3.6
+Terraform >= v1.3.6
 ```
 
 Generate shared ssh key you are going to use with AWS cloud. Use `ssh-keygen` or similar tools for it [How to Use ssh-keygen to Generate a New SSH Key?](https://www.ssh.com/academy/ssh/keygen)
