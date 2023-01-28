@@ -57,7 +57,7 @@ aws_ssh_connection_string = "ssh -i ~/.ssh/id_rsa ubuntu@34.203.35.202"
 
 - Jenkins is automatically provisioned and runs in Docker container
 
-- Check Video Demo below to see Jenkins pipeline in action
+- Check Video Demo down below to see Jenkins pipeline in action
 
 ## Video Demo
 
