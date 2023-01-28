@@ -52,6 +52,7 @@ aws_ssh_connection_string = "ssh -i ~/.ssh/id_rsa ubuntu@34.203.35.202"
 - Access web UI of Jenkins `aws_ip:8080`:
 
 login: `admin`
+
 pass: obtaint from the instance by executing `cat /jenkins_docker/pass.txt`
 
 - Jenkins is automatically provisioned and runs in Docker container
