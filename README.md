@@ -55,7 +55,7 @@ aws_ssh_connection_string = "ssh -i ~/.ssh/id_rsa ubuntu@34.203.35.202"
 
 **password**: obtaint from the instance by executing `cat /jenkins_docker/pass.txt`
 
-- Jenkins is automatically provisioned and runs in Docker container
+- Jenkins is automatically provisioned and runs in Docker container [install_docker_jenkins.sh](https://github.com/serhieiev/gl-hw9/blob/main/modules/aws/install_docker_jenkins.sh)
 
 - Jenkins related files are stored under `config` dir
 
