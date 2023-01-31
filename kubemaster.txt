@@ -1,0 +1,561 @@
+sergeevmxm@kubemaster:~$ sudo apt update && sudo apt upgrade -y
+Hit:1 http://europe-west1.gce.archive.ubuntu.com/ubuntu focal InRelease
+Get:2 http://europe-west1.gce.archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
+Get:3 http://europe-west1.gce.archive.ubuntu.com/ubuntu focal-backports InRelease [108 kB]
+Get:4 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]               
+Get:5 http://europe-west1.gce.archive.ubuntu.com/ubuntu focal/universe amd64 Packages [8628 kB]
+Get:6 http://europe-west1.gce.archive.ubuntu.com/ubuntu focal/universe Translation-en [5124 kB]
+Get:7 http://europe-west1.gce.archive.ubuntu.com/ubuntu focal/universe amd64 c-n-f Metadata [265 kB]
+Get:8 http://europe-west1.gce.archive.ubuntu.com/ubuntu focal/multiverse amd64 Packages [144 kB]
+Get:9 http://europe-west1.gce.archive.ubuntu.com/ubuntu focal/multiverse Translation-en [104 kB]
+Get:10 http://europe-west1.gce.archive.ubuntu.com/ubuntu focal/multiverse amd64 c-n-f Metadata [9136 B]
+Get:11 http://europe-west1.gce.archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [2346 kB]
+Get:12 http://europe-west1.gce.archive.ubuntu.com/ubuntu focal-updates/main Translation-en [404 kB]
+Get:13 http://europe-west1.gce.archive.ubuntu.com/ubuntu focal-updates/main amd64 c-n-f Metadata [16.2 kB]
+Get:14 http://europe-west1.gce.archive.ubuntu.com/ubuntu focal-updates/restricted amd64 Packages [1564 kB]
+Get:15 http://europe-west1.gce.archive.ubuntu.com/ubuntu focal-updates/restricted Translation-en [221 kB]
+Get:16 http://europe-west1.gce.archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [1021 kB]
+Get:17 http://europe-west1.gce.archive.ubuntu.com/ubuntu focal-updates/universe Translation-en [236 kB]
+Get:18 http://europe-west1.gce.archive.ubuntu.com/ubuntu focal-updates/universe amd64 c-n-f Metadata [23.4 kB]
+Get:19 http://europe-west1.gce.archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 Packages [25.2 kB]
+Get:20 http://europe-west1.gce.archive.ubuntu.com/ubuntu focal-updates/multiverse Translation-en [7408 B]
+Get:21 http://europe-west1.gce.archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 c-n-f Metadata [604 B]
+Get:22 http://europe-west1.gce.archive.ubuntu.com/ubuntu focal-backports/main amd64 Packages [45.7 kB]
+Get:23 http://europe-west1.gce.archive.ubuntu.com/ubuntu focal-backports/main Translation-en [16.3 kB]
+Get:24 http://europe-west1.gce.archive.ubuntu.com/ubuntu focal-backports/main amd64 c-n-f Metadata [1420 B]
+Get:25 http://europe-west1.gce.archive.ubuntu.com/ubuntu focal-backports/restricted amd64 c-n-f Metadata [116 B]
+Get:26 http://europe-west1.gce.archive.ubuntu.com/ubuntu focal-backports/universe amd64 Packages [24.9 kB]
+Get:27 http://europe-west1.gce.archive.ubuntu.com/ubuntu focal-backports/universe Translation-en [16.3 kB]
+Get:28 http://europe-west1.gce.archive.ubuntu.com/ubuntu focal-backports/universe amd64 c-n-f Metadata [880 B]
+Get:29 http://europe-west1.gce.archive.ubuntu.com/ubuntu focal-backports/multiverse amd64 c-n-f Metadata [116 B]
+Get:30 http://security.ubuntu.com/ubuntu focal-security/main amd64 Packages [1963 kB]
+Get:31 http://security.ubuntu.com/ubuntu focal-security/main Translation-en [321 kB]
+Get:32 http://security.ubuntu.com/ubuntu focal-security/main amd64 c-n-f Metadata [11.8 kB]
+Get:33 http://security.ubuntu.com/ubuntu focal-security/restricted amd64 Packages [1467 kB]
+Get:34 http://security.ubuntu.com/ubuntu focal-security/restricted Translation-en [207 kB]
+Get:35 http://security.ubuntu.com/ubuntu focal-security/universe amd64 Packages [790 kB]
+Get:36 http://security.ubuntu.com/ubuntu focal-security/universe Translation-en [153 kB]
+Get:37 http://security.ubuntu.com/ubuntu focal-security/universe amd64 c-n-f Metadata [16.9 kB]
+Get:38 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 Packages [22.2 kB]
+Get:39 http://security.ubuntu.com/ubuntu focal-security/multiverse Translation-en [5464 B]
+Get:40 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 c-n-f Metadata [516 B]
+Fetched 25.5 MB in 4s (6074 kB/s)               
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+6 packages can be upgraded. Run 'apt list --upgradable' to see them.
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Calculating upgrade... Done
+The following packages were automatically installed and are no longer required:
+  libatasmart4 libblockdev-fs2 libblockdev-loop2 libblockdev-part-err2 libblockdev-part2 libblockdev-swap2 libblockdev-utils2 libblockdev2 libmbim-glib4 libmbim-proxy libmm-glib0 libnspr4
+  libnss3 libnuma1 libparted-fs-resize0 libqmi-glib5 libqmi-proxy libudisks2-0 libxmlb2 usb-modeswitch usb-modeswitch-data
+Use 'sudo apt autoremove' to remove them.
+The following packages will be upgraded:
+  grub-efi-amd64-bin grub-efi-amd64-signed python3-software-properties snapd software-properties-common ubuntu-advantage-tools
+6 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Need to get 41.0 MB of archives.
+After this operation, 899 kB of additional disk space will be used.
+Get:1 http://europe-west1.gce.archive.ubuntu.com/ubuntu focal-updates/main amd64 ubuntu-advantage-tools amd64 27.13.2~20.04.1 [173 kB]
+Get:2 http://europe-west1.gce.archive.ubuntu.com/ubuntu focal-updates/main amd64 grub-efi-amd64-signed amd64 1.187.2~20.04.2+2.06-2ubuntu14 [1342 kB]
+Get:3 http://europe-west1.gce.archive.ubuntu.com/ubuntu focal-updates/main amd64 grub-efi-amd64-bin amd64 2.06-2ubuntu14 [1591 kB]
+Get:4 http://europe-west1.gce.archive.ubuntu.com/ubuntu focal-updates/main amd64 software-properties-common all 0.99.9.10 [10.4 kB]
+Get:5 http://europe-west1.gce.archive.ubuntu.com/ubuntu focal-updates/main amd64 python3-software-properties all 0.99.9.10 [21.7 kB]
+Get:6 http://europe-west1.gce.archive.ubuntu.com/ubuntu focal-updates/main amd64 snapd amd64 2.58+20.04 [37.9 MB]
+Fetched 41.0 MB in 1s (69.6 MB/s) 
+Preconfiguring packages ...
+(Reading database ... 62112 files and directories currently installed.)
+Preparing to unpack .../0-ubuntu-advantage-tools_27.13.2~20.04.1_amd64.deb ...
+Unpacking ubuntu-advantage-tools (27.13.2~20.04.1) over (27.12~20.04.1) ...
+Preparing to unpack .../1-grub-efi-amd64-signed_1.187.2~20.04.2+2.06-2ubuntu14_amd64.deb ...
+Unpacking grub-efi-amd64-signed (1.187.2~20.04.2+2.06-2ubuntu14) over (1.173.4+2.04-1ubuntu47.5) ...
+Preparing to unpack .../2-grub-efi-amd64-bin_2.06-2ubuntu14_amd64.deb ...
+Unpacking grub-efi-amd64-bin (2.06-2ubuntu14) over (2.04-1ubuntu47.5) ...
+Preparing to unpack .../3-software-properties-common_0.99.9.10_all.deb ...
+Unpacking software-properties-common (0.99.9.10) over (0.99.9.8) ...
+Preparing to unpack .../4-python3-software-properties_0.99.9.10_all.deb ...
+Unpacking python3-software-properties (0.99.9.10) over (0.99.9.8) ...
+Preparing to unpack .../5-snapd_2.58+20.04_amd64.deb ...
+Unpacking snapd (2.58+20.04) over (2.57.5+20.04ubuntu0.1) ...
+Setting up snapd (2.58+20.04) ...
+Installing new version of config file /etc/apt/apt.conf.d/20snapd.conf ...
+snapd.failure.service is a disabled or a static unit not running, not starting it.
+snapd.snap-repair.service is a disabled or a static unit not running, not starting it.
+Failed to restart snapd.mounts-pre.target: Operation refused, unit snapd.mounts-pre.target may be requested by dependency only (it is configured to refuse manual start/stop).
+See system logs and 'systemctl status snapd.mounts-pre.target' for details.
+Setting up python3-software-properties (0.99.9.10) ...
+Setting up ubuntu-advantage-tools (27.13.2~20.04.1) ...
+Installing new version of config file /etc/apt/apt.conf.d/20apt-esm-hook.conf ...
+Installing new version of config file /etc/ubuntu-advantage/help_data.yaml ...
+Installing new version of config file /etc/ubuntu-advantage/uaclient.conf ...
+Setting up grub-efi-amd64-bin (2.06-2ubuntu14) ...
+Setting up grub-efi-amd64-signed (1.187.2~20.04.2+2.06-2ubuntu14) ...
+Trying to migrate /boot/efi into esp config
+Installing grub to /boot/efi.
+Installing for x86_64-efi platform.
+Installation finished. No error reported.
+Setting up software-properties-common (0.99.9.10) ...
+Processing triggers for mime-support (3.64ubuntu1) ...
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for dbus (1.12.16-2ubuntu2.3) ...
+
+sergeevmxm@kubemaster:~$ sudo nano /etc/hosts
+sergeevmxm@kubemaster:~$ cat nano /etc/hosts
+cat: nano: No such file or directory
+127.0.0.1 localhost
+10.132.0.2 kubemaster
+10.132.0.3 kubenode
+
+# The following lines are desirable for IPv6 capable hosts
+::1 ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+ff02::3 ip6-allhosts
+169.254.169.254 metadata.google.internal metadata
+
+sergeevmxm@kubemaster:~$ sudo apt install curl apt-transport-https -y
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+curl is already the newest version (7.68.0-1ubuntu2.15).
+curl set to manually installed.
+The following packages were automatically installed and are no longer required:
+  libatasmart4 libblockdev-fs2 libblockdev-loop2 libblockdev-part-err2 libblockdev-part2 libblockdev-swap2 libblockdev-utils2 libblockdev2 libmbim-glib4 libmbim-proxy libmm-glib0 libnspr4
+  libnss3 libnuma1 libparted-fs-resize0 libqmi-glib5 libqmi-proxy libudisks2-0 libxmlb2 usb-modeswitch usb-modeswitch-data
+Use 'sudo apt autoremove' to remove them.
+The following NEW packages will be installed:
+  apt-transport-https
+0 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.
+Need to get 1704 B of archives.
+After this operation, 162 kB of additional disk space will be used.
+Get:1 http://europe-west1.gce.archive.ubuntu.com/ubuntu focal-updates/universe amd64 apt-transport-https all 2.0.9 [1704 B]
+Fetched 1704 B in 0s (52.4 kB/s)
+Selecting previously unselected package apt-transport-https.
+(Reading database ... 62118 files and directories currently installed.)
+Preparing to unpack .../apt-transport-https_2.0.9_all.deb ...
+Unpacking apt-transport-https (2.0.9) ...
+Setting up apt-transport-https (2.0.9) ...
+
+sergeevmxm@kubemaster:~$ curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+OK
+
+ergeevmxm@kubemaster:~$ echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
+deb https://apt.kubernetes.io/ kubernetes-xenial main
+
+sergeevmxm@kubemaster:~$ sudo apt update
+Hit:1 http://europe-west1.gce.archive.ubuntu.com/ubuntu focal InRelease
+Get:2 http://europe-west1.gce.archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB] 
+Hit:3 http://security.ubuntu.com/ubuntu focal-security InRelease                         
+Get:4 http://europe-west1.gce.archive.ubuntu.com/ubuntu focal-backports InRelease [108 kB]
+Get:5 https://packages.cloud.google.com/apt kubernetes-xenial InRelease [8993 B]
+Get:6 https://packages.cloud.google.com/apt kubernetes-xenial/main amd64 Packages [63.2 kB]
+Fetched 294 kB in 1s (404 kB/s)     
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+All packages are up to date.
+
+sergeevmxm@kubemaster:~$ sudo apt -y install vim git curl wget kubelet kubeadm kubectl
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+curl is already the newest version (7.68.0-1ubuntu2.15).
+git is already the newest version (1:2.25.1-1ubuntu3.8).
+git set to manually installed.
+vim is already the newest version (2:8.1.2269-1ubuntu5.11).
+vim set to manually installed.
+wget is already the newest version (1.20.3-1ubuntu2).
+wget set to manually installed.
+The following packages were automatically installed and are no longer required:
+  libatasmart4 libblockdev-fs2 libblockdev-loop2 libblockdev-part-err2 libblockdev-part2 libblockdev-swap2 libblockdev-utils2 libblockdev2 libmbim-glib4 libmbim-proxy libmm-glib0 libnspr4
+  libnss3 libnuma1 libparted-fs-resize0 libqmi-glib5 libqmi-proxy libudisks2-0 libxmlb2 usb-modeswitch usb-modeswitch-data
+Use 'sudo apt autoremove' to remove them.
+The following additional packages will be installed:
+  conntrack cri-tools ebtables kubernetes-cni socat
+Suggested packages:
+  nftables
+The following NEW packages will be installed:
+  conntrack cri-tools ebtables kubeadm kubectl kubelet kubernetes-cni socat
+0 upgraded, 8 newly installed, 0 to remove and 0 not upgraded.
+Need to get 87.2 MB of archives.
+After this operation, 341 MB of additional disk space will be used.
+Get:1 http://europe-west1.gce.archive.ubuntu.com/ubuntu focal/main amd64 conntrack amd64 1:1.4.5-2 [30.3 kB]
+Get:2 http://europe-west1.gce.archive.ubuntu.com/ubuntu focal/main amd64 ebtables amd64 2.0.11-3build1 [80.3 kB]
+Get:3 http://europe-west1.gce.archive.ubuntu.com/ubuntu focal/main amd64 socat amd64 1.7.3.3-2 [323 kB]
+Get:4 https://packages.cloud.google.com/apt kubernetes-xenial/main amd64 cri-tools amd64 1.26.0-00 [18.9 MB]
+Get:5 https://packages.cloud.google.com/apt kubernetes-xenial/main amd64 kubernetes-cni amd64 1.2.0-00 [27.6 MB]
+Get:6 https://packages.cloud.google.com/apt kubernetes-xenial/main amd64 kubelet amd64 1.26.1-00 [20.5 MB]
+Get:7 https://packages.cloud.google.com/apt kubernetes-xenial/main amd64 kubectl amd64 1.26.1-00 [10.1 MB]
+Get:8 https://packages.cloud.google.com/apt kubernetes-xenial/main amd64 kubeadm amd64 1.26.1-00 [9732 kB]
+Fetched 87.2 MB in 2s (39.7 MB/s)
+Selecting previously unselected package conntrack.
+(Reading database ... 62122 files and directories currently installed.)
+Preparing to unpack .../0-conntrack_1%3a1.4.5-2_amd64.deb ...
+Unpacking conntrack (1:1.4.5-2) ...
+Selecting previously unselected package cri-tools.
+Preparing to unpack .../1-cri-tools_1.26.0-00_amd64.deb ...
+Unpacking cri-tools (1.26.0-00) ...
+Selecting previously unselected package ebtables.
+Preparing to unpack .../2-ebtables_2.0.11-3build1_amd64.deb ...
+Unpacking ebtables (2.0.11-3build1) ...
+Selecting previously unselected package kubernetes-cni.
+Preparing to unpack .../3-kubernetes-cni_1.2.0-00_amd64.deb ...
+Unpacking kubernetes-cni (1.2.0-00) ...
+Selecting previously unselected package socat.
+Preparing to unpack .../4-socat_1.7.3.3-2_amd64.deb ...
+Unpacking socat (1.7.3.3-2) ...
+Selecting previously unselected package kubelet.
+Preparing to unpack .../5-kubelet_1.26.1-00_amd64.deb ...
+Unpacking kubelet (1.26.1-00) ...
+Selecting previously unselected package kubectl.
+Preparing to unpack .../6-kubectl_1.26.1-00_amd64.deb ...
+Unpacking kubectl (1.26.1-00) ...
+Selecting previously unselected package kubeadm.
+Preparing to unpack .../7-kubeadm_1.26.1-00_amd64.deb ...
+Unpacking kubeadm (1.26.1-00) ...
+Setting up conntrack (1:1.4.5-2) ...
+Setting up kubectl (1.26.1-00) ...
+Setting up ebtables (2.0.11-3build1) ...
+Setting up socat (1.7.3.3-2) ...
+Setting up cri-tools (1.26.0-00) ...
+Setting up kubernetes-cni (1.2.0-00) ...
+Setting up kubelet (1.26.1-00) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/kubelet.service → /lib/systemd/system/kubelet.service.
+Setting up kubeadm (1.26.1-00) ...
+Processing triggers for man-db (2.9.1-1) ...
+
+sergeevmxm@kubemaster:~$ sudo apt-mark hold kubelet kubeadm kubectl
+kubelet set on hold.
+kubeadm set on hold.
+kubectl set on hold.
+
+sergeevmxm@kubemaster:~$ sudo systemctl enable --now kubelet
+
+sergeevmxm@kubemaster:~$ sudo swapoff -a
+
+sergeevmxm@kubemaster:~$ sudo sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
+
+sergeevmxm@kubemaster:~$ sudo modprobe overlay
+
+sergeevmxm@kubemaster:~$ sudo modprobe br_netfilter
+
+sergeevmxm@kubemaster:~$ sudo tee /etc/sysctl.d/kubernetes.conf <<EOF
+net.bridge.bridge-nf-call-ip6tables = 1
+net.bridge.bridge-nf-call-iptables = 1
+net.ipv4.ip_forward = 1
+EOF
+net.bridge.bridge-nf-call-ip6tables = 1
+net.bridge.bridge-nf-call-iptables = 1
+net.ipv4.ip_forward = 1
+
+sergeevmxm@kubemaster:~$ cat /etc/sysctl.d/kubernetes.conf
+net.bridge.bridge-nf-call-ip6tables = 1
+net.bridge.bridge-nf-call-iptables = 1
+net.ipv4.ip_forward = 1
+
+sergeevmxm@kubemaster:~$ sudo sysctl --system
+* Applying /etc/sysctl.d/10-console-messages.conf ...
+kernel.printk = 4 4 1 7
+* Applying /etc/sysctl.d/10-ipv6-privacy.conf ...
+net.ipv6.conf.all.use_tempaddr = 2
+net.ipv6.conf.default.use_tempaddr = 2
+* Applying /etc/sysctl.d/10-kernel-hardening.conf ...
+kernel.kptr_restrict = 1
+* Applying /etc/sysctl.d/10-link-restrictions.conf ...
+fs.protected_hardlinks = 1
+fs.protected_symlinks = 1
+* Applying /etc/sysctl.d/10-magic-sysrq.conf ...
+kernel.sysrq = 176
+* Applying /etc/sysctl.d/10-network-security.conf ...
+net.ipv4.conf.default.rp_filter = 2
+net.ipv4.conf.all.rp_filter = 2
+* Applying /etc/sysctl.d/10-ptrace.conf ...
+kernel.yama.ptrace_scope = 1
+* Applying /etc/sysctl.d/10-zeropage.conf ...
+vm.mmap_min_addr = 65536
+* Applying /usr/lib/sysctl.d/50-default.conf ...
+net.ipv4.conf.default.promote_secondaries = 1
+sysctl: setting key "net.ipv4.conf.all.promote_secondaries": Invalid argument
+net.ipv4.ping_group_range = 0 2147483647
+net.core.default_qdisc = fq_codel
+fs.protected_regular = 1
+fs.protected_fifos = 1
+* Applying /usr/lib/sysctl.d/50-pid-max.conf ...
+kernel.pid_max = 4194304
+* Applying /etc/sysctl.d/60-gce-network-security.conf ...
+net.ipv4.tcp_syncookies = 1
+net.ipv4.conf.all.accept_source_route = 0
+net.ipv4.conf.default.accept_source_route = 0
+net.ipv4.conf.all.accept_redirects = 0
+net.ipv4.conf.default.accept_redirects = 0
+net.ipv4.conf.all.secure_redirects = 1
+net.ipv4.conf.default.secure_redirects = 1
+net.ipv4.ip_forward = 0
+net.ipv4.conf.all.send_redirects = 0
+net.ipv4.conf.default.send_redirects = 0
+net.ipv4.conf.all.rp_filter = 1
+net.ipv4.conf.default.rp_filter = 1
+net.ipv4.icmp_echo_ignore_broadcasts = 1
+net.ipv4.icmp_ignore_bogus_error_responses = 1
+net.ipv4.conf.all.log_martians = 1
+net.ipv4.conf.default.log_martians = 1
+kernel.randomize_va_space = 2
+kernel.panic = 10
+* Applying /etc/sysctl.d/99-cloudimg-ipv6.conf ...
+net.ipv6.conf.all.use_tempaddr = 0
+net.ipv6.conf.default.use_tempaddr = 0
+* Applying /etc/sysctl.d/99-sysctl.conf ...
+* Applying /etc/sysctl.d/kubernetes.conf ...
+net.bridge.bridge-nf-call-ip6tables = 1
+net.bridge.bridge-nf-call-iptables = 1
+net.ipv4.ip_forward = 1
+* Applying /usr/lib/sysctl.d/protect-links.conf ...
+fs.protected_fifos = 1
+fs.protected_hardlinks = 1
+fs.protected_regular = 2
+fs.protected_symlinks = 1
+* Applying /etc/sysctl.conf ...
+
+sergeevmxm@kubemaster:~$ sudo apt install curl gnupg2 software-properties-common apt-transport-https ca-certificates -y
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+ca-certificates is already the newest version (20211016ubuntu0.20.04.1).
+ca-certificates set to manually installed.
+curl is already the newest version (7.68.0-1ubuntu2.15).
+software-properties-common is already the newest version (0.99.9.10).
+software-properties-common set to manually installed.
+apt-transport-https is already the newest version (2.0.9).
+The following packages were automatically installed and are no longer required:
+  libatasmart4 libblockdev-fs2 libblockdev-loop2 libblockdev-part-err2 libblockdev-part2 libblockdev-swap2 libblockdev-utils2 libblockdev2 libmbim-glib4 libmbim-proxy libmm-glib0 libnspr4
+  libnss3 libnuma1 libparted-fs-resize0 libqmi-glib5 libqmi-proxy libudisks2-0 libxmlb2 usb-modeswitch usb-modeswitch-data
+Use 'sudo apt autoremove' to remove them.
+The following NEW packages will be installed:
+  gnupg2
+0 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.
+Need to get 5316 B of archives.
+After this operation, 51.2 kB of additional disk space will be used.
+Get:1 http://europe-west1.gce.archive.ubuntu.com/ubuntu focal-updates/universe amd64 gnupg2 all 2.2.19-3ubuntu2.2 [5316 B]
+Fetched 5316 B in 0s (199 kB/s)
+Selecting previously unselected package gnupg2.
+(Reading database ... 62216 files and directories currently installed.)
+Preparing to unpack .../gnupg2_2.2.19-3ubuntu2.2_all.deb ...
+Unpacking gnupg2 (2.2.19-3ubuntu2.2) ...
+Setting up gnupg2 (2.2.19-3ubuntu2.2) ...
+Processing triggers for man-db (2.9.1-1) ...
+
+sergeevmxm@kubemaster:~$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+OK
+
+sergeevmxm@kubemaster:~$ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+Hit:1 http://europe-west1.gce.archive.ubuntu.com/ubuntu focal InRelease
+Get:2 http://europe-west1.gce.archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]                      
+Get:3 http://europe-west1.gce.archive.ubuntu.com/ubuntu focal-backports InRelease [108 kB]                    
+Get:4 https://download.docker.com/linux/ubuntu focal InRelease [57.7 kB]                                                    
+Get:5 https://packages.cloud.google.com/apt kubernetes-xenial InRelease [8993 B]                                            
+Hit:6 http://security.ubuntu.com/ubuntu focal-security InRelease                  
+Get:7 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages [23.3 kB]
+Fetched 312 kB in 1s (403 kB/s)   
+Reading package lists... Done
+
+sergeevmxm@kubemaster:~$ sudo apt update
+Hit:1 http://europe-west1.gce.archive.ubuntu.com/ubuntu focal InRelease
+Get:2 http://europe-west1.gce.archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]                                                                                        
+Get:3 http://europe-west1.gce.archive.ubuntu.com/ubuntu focal-backports InRelease [108 kB]                                                                                      
+Hit:4 http://security.ubuntu.com/ubuntu focal-security InRelease                                                                                                                
+Hit:5 https://download.docker.com/linux/ubuntu focal InRelease                                                                                                                  
+Hit:6 https://packages.cloud.google.com/apt kubernetes-xenial InRelease  
+Fetched 222 kB in 1s (287 kB/s)
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+All packages are up to date.
+
+sergeevmxm@kubemaster:~$ sudo apt install containerd.io -y
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  libatasmart4 libblockdev-fs2 libblockdev-loop2 libblockdev-part-err2 libblockdev-part2 libblockdev-swap2 libblockdev-utils2 libblockdev2 libmbim-glib4 libmbim-proxy libmm-glib0 libnspr4
+  libnss3 libnuma1 libparted-fs-resize0 libqmi-glib5 libqmi-proxy libudisks2-0 libxmlb2 usb-modeswitch usb-modeswitch-data
+Use 'sudo apt autoremove' to remove them.
+The following NEW packages will be installed:
+  containerd.io
+0 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.
+Need to get 27.7 MB of archives.
+After this operation, 114 MB of additional disk space will be used.
+Get:1 https://download.docker.com/linux/ubuntu focal/stable amd64 containerd.io amd64 1.6.16-1 [27.7 MB]
+Fetched 27.7 MB in 1s (39.8 MB/s)        
+Selecting previously unselected package containerd.io.
+(Reading database ... 62222 files and directories currently installed.)
+Preparing to unpack .../containerd.io_1.6.16-1_amd64.deb ...
+Unpacking containerd.io (1.6.16-1) ...
+Setting up containerd.io (1.6.16-1) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/containerd.service → /lib/systemd/system/containerd.service.
+Processing triggers for man-db (2.9.1-1) ...
+
+sergeevmxm@kubemaster:~$ sudo su
+
+root@kubemaster:/home/sergeevmxm# mkdir -p /etc/containerd
+
+root@kubemaster:/home/sergeevmxm# containerd config default>/etc/containerd/config.toml
+
+root@kubemaster:/home/sergeevmxm# exit
+exit
+sergeevmxm@kubemaster:~$ sudo systemctl restart containerd
+
+sergeevmxm@kubemaster:~$ sudo systemctl enable containerd
+
+sergeevmxm@kubemaster:~$ sudo kubeadm config images pull
+[config/images] Pulled registry.k8s.io/kube-apiserver:v1.26.1
+[config/images] Pulled registry.k8s.io/kube-controller-manager:v1.26.1
+[config/images] Pulled registry.k8s.io/kube-scheduler:v1.26.1
+[config/images] Pulled registry.k8s.io/kube-proxy:v1.26.1
+[config/images] Pulled registry.k8s.io/pause:3.9
+[config/images] Pulled registry.k8s.io/etcd:3.5.6-0
+[config/images] Pulled registry.k8s.io/coredns/coredns:v1.9.3
+
+sergeevmxm@kubemaster:~$ sudo kubeadm init --pod-network-cidr=192.168.0.0/16
+[init] Using Kubernetes version: v1.26.1
+[preflight] Running pre-flight checks
+[preflight] Pulling images required for setting up a Kubernetes cluster
+[preflight] This might take a minute or two, depending on the speed of your internet connection
+[preflight] You can also perform this action in beforehand using 'kubeadm config images pull'
+[certs] Using certificateDir folder "/etc/kubernetes/pki"
+[certs] Generating "ca" certificate and key
+[certs] Generating "apiserver" certificate and key
+[certs] apiserver serving cert is signed for DNS names [kubemaster kubernetes kubernetes.default kubernetes.default.svc kubernetes.default.svc.cluster.local] and IPs [10.96.0.1 10.132.0.2]
+[certs] Generating "apiserver-kubelet-client" certificate and key
+[certs] Generating "front-proxy-ca" certificate and key
+[certs] Generating "front-proxy-client" certificate and key
+[certs] Generating "etcd/ca" certificate and key
+[certs] Generating "etcd/server" certificate and key
+[certs] etcd/server serving cert is signed for DNS names [kubemaster localhost] and IPs [10.132.0.2 127.0.0.1 ::1]
+[certs] Generating "etcd/peer" certificate and key
+[certs] etcd/peer serving cert is signed for DNS names [kubemaster localhost] and IPs [10.132.0.2 127.0.0.1 ::1]
+[certs] Generating "etcd/healthcheck-client" certificate and key
+[certs] Generating "apiserver-etcd-client" certificate and key
+[certs] Generating "sa" key and public key
+[kubeconfig] Using kubeconfig folder "/etc/kubernetes"
+[kubeconfig] Writing "admin.conf" kubeconfig file
+[kubeconfig] Writing "kubelet.conf" kubeconfig file
+[kubeconfig] Writing "controller-manager.conf" kubeconfig file
+[kubeconfig] Writing "scheduler.conf" kubeconfig file
+[kubelet-start] Writing kubelet environment file with flags to file "/var/lib/kubelet/kubeadm-flags.env"
+[kubelet-start] Writing kubelet configuration to file "/var/lib/kubelet/config.yaml"
+[kubelet-start] Starting the kubelet
+[control-plane] Using manifest folder "/etc/kubernetes/manifests"
+[control-plane] Creating static Pod manifest for "kube-apiserver"
+[control-plane] Creating static Pod manifest for "kube-controller-manager"
+[control-plane] Creating static Pod manifest for "kube-scheduler"
+[etcd] Creating static Pod manifest for local etcd in "/etc/kubernetes/manifests"
+[wait-control-plane] Waiting for the kubelet to boot up the control plane as static Pods from directory "/etc/kubernetes/manifests". This can take up to 4m0s
+[apiclient] All control plane components are healthy after 6.502194 seconds
+[upload-config] Storing the configuration used in ConfigMap "kubeadm-config" in the "kube-system" Namespace
+[kubelet] Creating a ConfigMap "kubelet-config" in namespace kube-system with the configuration for the kubelets in the cluster
+[upload-certs] Skipping phase. Please see --upload-certs
+[mark-control-plane] Marking the node kubemaster as control-plane by adding the labels: [node-role.kubernetes.io/control-plane node.kubernetes.io/exclude-from-external-load-balancers]
+[mark-control-plane] Marking the node kubemaster as control-plane by adding the taints [node-role.kubernetes.io/control-plane:NoSchedule]
+[bootstrap-token] Using token: xaz95d.deoiya1tm55tfmbv
+[bootstrap-token] Configuring bootstrap tokens, cluster-info ConfigMap, RBAC Roles
+[bootstrap-token] Configured RBAC rules to allow Node Bootstrap tokens to get nodes
+[bootstrap-token] Configured RBAC rules to allow Node Bootstrap tokens to post CSRs in order for nodes to get long term certificate credentials
+[bootstrap-token] Configured RBAC rules to allow the csrapprover controller automatically approve CSRs from a Node Bootstrap Token
+[bootstrap-token] Configured RBAC rules to allow certificate rotation for all node client certificates in the cluster
+[bootstrap-token] Creating the "cluster-info" ConfigMap in the "kube-public" namespace
+[kubelet-finalize] Updating "/etc/kubernetes/kubelet.conf" to point to a rotatable kubelet client certificate and key
+[addons] Applied essential addon: CoreDNS
+[addons] Applied essential addon: kube-proxy
+
+Your Kubernetes control-plane has initialized successfully!
+
+To start using your cluster, you need to run the following as a regular user:
+
+  mkdir -p $HOME/.kube
+  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+  sudo chown $(id -u):$(id -g) $HOME/.kube/config
+
+Alternatively, if you are the root user, you can run:
+
+  export KUBECONFIG=/etc/kubernetes/admin.conf
+
+You should now deploy a pod network to the cluster.
+Run "kubectl apply -f [podnetwork].yaml" with one of the options listed at:
+  https://kubernetes.io/docs/concepts/cluster-administration/addons/
+
+Then you can join any number of worker nodes by running the following on each as root:
+
+sergeevmxm@kubemaster:~$ mkdir -p $HOME/.kube
+
+sergeevmxm@kubemaster:~$ sudo cp -f /etc/kubernetes/admin.conf $HOME/.kube/config
+
+sergeevmxm@kubemaster:~$ sudo chown $(id -u):$(id -g) $HOME/.kube/config
+
+sergeevmxm@kubemaster:~$ kubectl get nodes
+NAME         STATUS     ROLES           AGE     VERSION
+kubemaster   NotReady   control-plane   3m54s   v1.26.1
+
+sergeevmxm@kubemaster:~$ kubectl create -f https://raw.githubusercontent.com/projectcalico/calico/v3.25.0/manifests/tigera-operator.yaml
+namespace/tigera-operator created
+customresourcedefinition.apiextensions.k8s.io/bgpconfigurations.crd.projectcalico.org created
+customresourcedefinition.apiextensions.k8s.io/bgppeers.crd.projectcalico.org created
+customresourcedefinition.apiextensions.k8s.io/blockaffinities.crd.projectcalico.org created
+customresourcedefinition.apiextensions.k8s.io/caliconodestatuses.crd.projectcalico.org created
+customresourcedefinition.apiextensions.k8s.io/clusterinformations.crd.projectcalico.org created
+customresourcedefinition.apiextensions.k8s.io/felixconfigurations.crd.projectcalico.org created
+customresourcedefinition.apiextensions.k8s.io/globalnetworkpolicies.crd.projectcalico.org created
+customresourcedefinition.apiextensions.k8s.io/globalnetworksets.crd.projectcalico.org created
+customresourcedefinition.apiextensions.k8s.io/hostendpoints.crd.projectcalico.org created
+customresourcedefinition.apiextensions.k8s.io/ipamblocks.crd.projectcalico.org created
+customresourcedefinition.apiextensions.k8s.io/ipamconfigs.crd.projectcalico.org created
+customresourcedefinition.apiextensions.k8s.io/ipamhandles.crd.projectcalico.org created
+customresourcedefinition.apiextensions.k8s.io/ippools.crd.projectcalico.org created
+customresourcedefinition.apiextensions.k8s.io/ipreservations.crd.projectcalico.org created
+customresourcedefinition.apiextensions.k8s.io/kubecontrollersconfigurations.crd.projectcalico.org created
+customresourcedefinition.apiextensions.k8s.io/networkpolicies.crd.projectcalico.org created
+customresourcedefinition.apiextensions.k8s.io/networksets.crd.projectcalico.org created
+customresourcedefinition.apiextensions.k8s.io/apiservers.operator.tigera.io created
+customresourcedefinition.apiextensions.k8s.io/imagesets.operator.tigera.io created
+customresourcedefinition.apiextensions.k8s.io/installations.operator.tigera.io created
+customresourcedefinition.apiextensions.k8s.io/tigerastatuses.operator.tigera.io created
+serviceaccount/tigera-operator created
+clusterrole.rbac.authorization.k8s.io/tigera-operator created
+clusterrolebinding.rbac.authorization.k8s.io/tigera-operator created
+deployment.apps/tigera-operator created
+
+sergeevmxm@kubemaster:~$ curl https://raw.githubusercontent.com/projectcalico/calico/v3.25.0/manifests/custom-resources.yaml -O
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   827  100   827    0     0   3691      0 --:--:-- --:--:-- --:--:--  3691
+
+sergeevmxm@kubemaster:~$ kubectl create -f custom-resources.yaml
+installation.operator.tigera.io/default created
+apiserver.operator.tigera.io/default created
+
+sergeevmxm@kubemaster:~$ kubectl get pods --all-namespaces -w
+NAMESPACE          NAME                                       READY   STATUS    RESTARTS   AGE
+calico-apiserver   calico-apiserver-7bd97dbcc7-7bgcr          1/1     Running   0          3m7s
+calico-apiserver   calico-apiserver-7bd97dbcc7-fb5fg          1/1     Running   0          3m7s
+calico-system      calico-kube-controllers-6b7b9c649d-czzmv   1/1     Running   0          3m49s
+calico-system      calico-node-b7l68                          1/1     Running   0          3m49s
+calico-system      calico-node-c88zj                          1/1     Running   0          3m49s
+calico-system      calico-typha-9466466f8-xfws8               1/1     Running   0          3m49s
+calico-system      csi-node-driver-94ht5                      2/2     Running   0          3m33s
+calico-system      csi-node-driver-nfg4x                      2/2     Running   0          3m28s
+kube-system        coredns-787d4945fb-5fv8b                   1/1     Running   0          9m41s
+kube-system        coredns-787d4945fb-t7z88                   1/1     Running   0          9m41s
+kube-system        etcd-kubemaster                            1/1     Running   0          9m55s
+kube-system        kube-apiserver-kubemaster                  1/1     Running   0          9m55s
+kube-system        kube-controller-manager-kubemaster         1/1     Running   0          9m55s
+kube-system        kube-proxy-fr8zj                           1/1     Running   0          9m41s
+kube-system        kube-proxy-wts8t                           1/1     Running   0          4m51s
+kube-system        kube-scheduler-kubemaster                  1/1     Running   0          9m57s
+tigera-operator    tigera-operator-54b47459dd-fbblc           1/1     Running   0          4m19s
+
+sergeevmxm@kubemaster:~$ kubectl get nodes -o wide
+NAME         STATUS   ROLES           AGE     VERSION   INTERNAL-IP   EXTERNAL-IP   OS-IMAGE             KERNEL-VERSION    CONTAINER-RUNTIME
+kubemaster   Ready    control-plane   10m     v1.26.1   10.132.0.2    <none>        Ubuntu 20.04.5 LTS   5.15.0-1027-gcp   containerd://1.6.16
+kubenode     Ready    <none>          5m27s   v1.26.1   10.132.0.3    <none>        Ubuntu 20.04.5 LTS   5.15.0-1027-gcp   containerd://1.6.16
