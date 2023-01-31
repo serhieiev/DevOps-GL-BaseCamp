@@ -2,4 +2,4 @@
 
 2 VMs (kubemaster and kubenode) with the same parametrs were created on GCP.
 
-The commands execution output can be found in the corresponding files
+The commands execution output can be found in the corresponding files.
