@@ -1,0 +1,21 @@
+sergeevmxm@kubemaster:~$ kubectl get namespaces
+NAME               STATUS   AGE
+calico-apiserver   Active   5d19h
+calico-system      Active   5d19h
+default            Active   5d19h
+kube-node-lease    Active   5d19h
+kube-public        Active   5d19h
+kube-system        Active   5d19h
+tigera-operator    Active   5d19h
+sergeevmxm@kubemaster:~$ kubectl create namespace development
+namespace/development created
+sergeevmxm@kubemaster:~$ kubectl get namespaces
+NAME               STATUS   AGE
+calico-apiserver   Active   5d19h
+calico-system      Active   5d19h
+default            Active   5d19h
+development        Active   18s
+kube-node-lease    Active   5d19h
+kube-public        Active   5d19h
+kube-system        Active   5d19h
+tigera-operator    Active   5d19h
