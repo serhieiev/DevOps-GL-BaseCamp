@@ -26,8 +26,9 @@ link to the [internal-port-job.yaml](https://github.com/serhieiev/gl-hw-k8s/blob
 
 b) Second, get content via curl from an external port (NodePort)
 
-5. Prepare Cronjob.yaml file which will test the connection to Nginx or Apache service every 3 minutes.
+link to the [external-port-job.yaml](https://github.com/serhieiev/gl-hw-k8s/blob/main/Task2/external-port-job.yaml)
 
+5. Prepare Cronjob.yaml file which will test the connection to Nginx or Apache service every 3 minutes.
 
 link to the [Cronjob.yaml](https://github.com/serhieiev/gl-hw-k8s/blob/main/Task2/Cronjob.yaml)
 

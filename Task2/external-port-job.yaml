@@ -1,0 +1,14 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: external-port-job
+  namespace: development
+spec:
+  template:
+    spec:
+      containers:
+        - name: curl
+          image: curlimages/curl
+          command: ["sh", "-c", "curl http://<NODE_IP>:30080"]
+      restartPolicy: Never
+  backoffLimit: 4
