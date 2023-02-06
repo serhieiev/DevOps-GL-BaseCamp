@@ -4,7 +4,11 @@
 
 1. Get information about your worker node and save it in some file
 
+link to the (describe_worker_node.txt)[https://github.com/serhieiev/gl-hw-k8s/blob/main/Task2/describe_worker_node.txt]
+
 2. Create a new namespace (all resources below will create in this namespace)
+
+link to the (create_namespace.txt)[https://github.com/serhieiev/gl-hw-k8s/blob/main/Task2/create_namespace.txt]
 
 3. Prepare deployment.yaml file which will create a Deployment with 3 pods of Nginx or Apache and service for access to these pods via ClusterIP and NodePort. 
 a) Show the status of deployment, pods and services. Describe all resources which you will create and logs from pods
