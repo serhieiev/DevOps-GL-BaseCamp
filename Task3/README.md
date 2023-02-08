@@ -36,5 +36,7 @@ The example service uses [kuard](https://github.com/kubernetes-up-and-running/ku
 
 `kubectl create --edit -f https://raw.githubusercontent.com/...` has been used to download the examples from GitHub , edit it, and submit the manifest to Kubernetes
 
+All done. link to the [output.txt](https://github.com/serhieiev/gl-hw-k8s/blob/main/Task3/output.txt)
+
 ## Demo
 ![serhieiev site-https](https://user-images.githubusercontent.com/12089303/217675067-f2cbfcc7-3ba5-41f2-924b-9999fa3d2ec2.png)
