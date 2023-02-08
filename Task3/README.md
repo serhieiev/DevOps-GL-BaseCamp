@@ -32,6 +32,9 @@ Prepare Nginx deployment:
 - Ingress (which will be connected to ClusterIssuer and use the letsencrypt
 certificate)
 
-The example service uses kuard, a demo application.
+The example service uses [kuard](https://github.com/kubernetes-up-and-running/kuard), a demo application.
 
 `kubectl create --edit -f https://raw.githubusercontent.com/...` has been used to download the examples from GitHub , edit it, and submit the manifest to Kubernetes
+
+## Demo
+![serhieiev site-https](https://user-images.githubusercontent.com/12089303/217675067-f2cbfcc7-3ba5-41f2-924b-9999fa3d2ec2.png)
