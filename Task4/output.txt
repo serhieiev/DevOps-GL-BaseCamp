@@ -1,4 +1,4 @@
-  ~/.ssh  ssh -i ~/.ssh/gcp_key serhieiev@34.88.87.55                                                
+~ ssh -i ~/.ssh/gcp_key serhieiev@34.88.87.55                                               
 The authenticity of host '34.88.87.55 (34.88.87.55)' can't be established.
 ED25519 key fingerprint is SHA256:4GBYq1oJ65TTCpo3sMeIbRoH22nlSNdO47M6wM1pi34.
 This key is not known by any other names
@@ -173,3 +173,27 @@ If TLS is enabled for the Ingress, a Secret containing the certificate and key m
 serhieiev@node1:~/ingress-nginx-helm-chart-4.4.2/charts/ingress-nginx$ sudo kubectl get deploy
 NAME                       READY   UP-TO-DATE   AVAILABLE   AGE
 ingress-nginx-controller   3/3     3            3           6m41s
+
+serhieiev@my-k8s:~$ helm create pacman-kubernetes
+WARNING: Kubernetes configuration file is group-readable. This is insecure. Location: /home/serhieiev/.kube/config
+WARNING: Kubernetes configuration file is world-readable. This is insecure. Location: /home/serhieiev/.kube/config
+Creating pacman-kubernetes
+serhieiev@my-k8s:~$ cd pacman-kubernetes/
+serhieiev@my-k8s:~/pacman-kubernetes$ ls
+Chart.yaml  charts  templates  values.yaml
+
+serhieiev@my-k8s:~/pacman-kubernetes$ helm install pacman .
+WARNING: Kubernetes configuration file is group-readable. This is insecure. Location: /home/serhieiev/.kube/config
+WARNING: Kubernetes configuration file is world-readable. This is insecure. Location: /home/serhieiev/.kube/config
+NAME: pacman
+LAST DEPLOYED: Sun Feb 12 20:39:22 2023
+NAMESPACE: default
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+serhieiev@my-k8s:~/pacman-kubernetes$ kubectl get pods
+NAME                                                  READY   STATUS    RESTARTS   AGE
+pacman-deployment-6b7c45fd4-6j9zf                     1/1     Running   0          91s
+pacman-deployment-6b7c45fd4-77hvg                     1/1     Running   0          91s
+pacman-deployment-6b7c45fd4-j8sbd                     1/1     Running   0          91s
+quickstart-ingress-nginx-controller-5c456b44f-kc46q   1/1     Running   0          140m
