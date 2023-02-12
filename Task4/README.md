@@ -4,9 +4,19 @@
 
 ## Task 1
 Deploy Nginx via helm with Ingress configuration
+
 a. Set variables via value yaml
-b. Use “helm upgrade --install --atomic ...” to change some parameters (Example:
-number of pods)
+
+b. Use “helm upgrade --install --atomic ...” to change some parameters (Example: number of pods)
+
+Install Helm using:
+````
+
+````
+
+Validate Helm version:
+![helm_version_output](https://user-images.githubusercontent.com/12089303/218286852-3f9adc6c-5830-46d8-90a2-743cd3a917b8.png)
+
 
 ## Task 2
 Create and deploy your own chart with the Pacman ( https://hub.docker.com/r/golucky5/pacman ) game. ( https://helm.sh/docs/chart_template_guide/getting_started/ )
