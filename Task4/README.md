@@ -42,7 +42,7 @@ ingress-nginx-controller   3/3     3            3           6m41s
 ## Task 2
 Create and deploy your own chart with the Pacman (https://hub.docker.com/r/golucky5/pacman) game. 
 
-[Follow](https://helm.sh/docs/chart_template_guide/getting_started/)
+[Follow official guide](https://helm.sh/docs/chart_template_guide/getting_started/)
 
 Create a new Helm chart:
 ```
@@ -70,6 +70,7 @@ kubectl get pods
 ```
 ![chart-verify-deployment](https://user-images.githubusercontent.com/12089303/218342877-8a1b7e2a-3ea6-47cd-8b8b-86e7d7a02f07.png)
 
+Detailed output can be found in the [output.txt](https://github.com/serhieiev/gl-hw-k8s/blob/main/Task4/output.txt)
 
 ## Task 3 (Extra)
 Deploy MERN stack (MongoDB, Express.js, React.js, Node.js) via helm
