@@ -1,0 +1,175 @@
+  ~/.ssh  ssh -i ~/.ssh/gcp_key serhieiev@34.88.87.55                                                
+The authenticity of host '34.88.87.55 (34.88.87.55)' can't be established.
+ED25519 key fingerprint is SHA256:4GBYq1oJ65TTCpo3sMeIbRoH22nlSNdO47M6wM1pi34.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '34.88.87.55' (ED25519) to the list of known hosts.
+Welcome to Ubuntu 20.04.5 LTS (GNU/Linux 5.15.0-1027-gcp x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Sat Feb 11 22:30:24 UTC 2023
+
+  System load:  0.0               Processes:             117
+  Usage of /:   4.3% of 43.43GB   Users logged in:       0
+  Memory usage: 3%                IPv4 address for ens4: 10.166.0.2
+  Swap usage:   0%
+
+0 updates can be applied immediately.
+
+
+The list of available updates is more than a week old.
+To check for new updates run: sudo apt update
+
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+serhieiev@k8s:~$ ls /etc/kubernetes/admin.conf
+/etc/kubernetes/admin.conf
+serhieiev@k8s:~$ mkdir ~/.kube
+serhieiev@k8s:~$ sudo cp /etc/kubernetes/admin.conf ~/.kube/config
+serhieiev@k8s:~$ sudo chmod 777 ~/.kube/config
+serhieiev@k8s:~$ kubectl get nodes
+NAME    STATUS   ROLES           AGE   VERSION
+node1   Ready    control-plane   26m   v1.24.6
+serhieiev@k8s:~$ kubectl get ns
+NAME              STATUS   AGE
+default           Active   26m
+kube-node-lease   Active   26m
+kube-public       Active   26m
+kube-system       Active   26m
+metallb-system    Active   21m
+serhieiev@k8s:~$ pwd
+/home/serhieiev
+serhieiev@k8s:~$ curl -fsSL -o get_helm.sh
+curl: no URL specified!
+curl: try 'curl --help' or 'curl --manual' for more information
+serhieiev@k8s:~$ curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
+serhieiev@k8s:~$ chmod 700 get_helm.sh
+serhieiev@k8s:~$ ./get_helm.sh
+Downloading https://get.helm.sh/helm-v3.11.1-linux-amd64.tar.gz
+Verifying checksum... Done.
+Preparing to install helm into /usr/local/bin
+helm installed into /usr/local/bin/helm
+serhieiev@k8s:~$ helm version
+WARNING: Kubernetes configuration file is group-readable. This is insecure. Location: /home/serhieiev/.kube/config
+WARNING: Kubernetes configuration file is world-readable. This is insecure. Location: /home/serhieiev/.kube/config
+version.BuildInfo{Version:"v3.11.1", GitCommit:"293b50c65d4d56187cd4e2f390f0ada46b4c4737", GitTreeState:"clean", GoVersion:"go1.18.10"}
+serhieiev@k8s:~$ chmod go-r ~/.kube/config
+chmod: changing permissions of '/home/serhieiev/.kube/config': Operation not permitted
+serhieiev@k8s:~$ sudo chmod go-r ~/.kube/config
+serhieiev@k8s:~$ helm version
+version.BuildInfo{Version:"v3.11.1", GitCommit:"293b50c65d4d56187cd4e2f390f0ada46b4c4737", GitTreeState:"clean", GoVersion:"go1.18.10"}
+
+serhieiev@node1:~/ingress-nginx-helm-chart-4.4.2/charts/ingress-nginx$ sudo helm install ingress-nginx  -f values.yaml .
+NAME: ingress-nginx
+LAST DEPLOYED: Sun Feb 12 12:49:36 2023
+NAMESPACE: default
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+NOTES:
+The ingress-nginx controller has been installed.
+It may take a few minutes for the LoadBalancer IP to be available.
+You can watch the status by running 'kubectl --namespace default get services -o wide -w ingress-nginx-controller'
+
+An example Ingress that makes use of the controller:
+  apiVersion: networking.k8s.io/v1
+  kind: Ingress
+  metadata:
+    name: example
+    namespace: foo
+  spec:
+    ingressClassName: nginx
+    rules:
+      - host: www.example.com
+        http:
+          paths:
+            - pathType: Prefix
+              backend:
+                service:
+                  name: exampleService
+                  port:
+                    number: 80
+              path: /
+    # This section is only required if TLS is to be enabled for the Ingress
+    tls:
+      - hosts:
+        - www.example.com
+        secretName: example-tls
+
+If TLS is enabled for the Ingress, a Secret containing the certificate and key must also be provided:
+
+  apiVersion: v1
+  kind: Secret
+  metadata:
+    name: example-tls
+    namespace: foo
+  data:
+    tls.crt: <base64 encoded cert>
+    tls.key: <base64 encoded key>
+  type: kubernetes.io/tls
+
+  serhieiev@node1:~/ingress-nginx-helm-chart-4.4.2/charts/ingress-nginx$ nano values.yaml
+serhieiev@node1:~/ingress-nginx-helm-chart-4.4.2/charts/ingress-nginx$ sudo kubectl get deploy
+NAME                       READY   UP-TO-DATE   AVAILABLE   AGE
+ingress-nginx-controller   1/1     1            1           5m11s
+serhieiev@node1:~/ingress-nginx-helm-chart-4.4.2/charts/ingress-nginx$ sudo helm upgrade --install --atomic ingress-nginx -f values.yaml .
+Release "ingress-nginx" has been upgraded. Happy Helming!
+NAME: ingress-nginx
+LAST DEPLOYED: Sun Feb 12 12:55:36 2023
+NAMESPACE: default
+STATUS: deployed
+REVISION: 2
+TEST SUITE: None
+NOTES:
+The ingress-nginx controller has been installed.
+It may take a few minutes for the LoadBalancer IP to be available.
+You can watch the status by running 'kubectl --namespace default get services -o wide -w ingress-nginx-controller'
+
+An example Ingress that makes use of the controller:
+  apiVersion: networking.k8s.io/v1
+  kind: Ingress
+  metadata:
+    name: example
+    namespace: foo
+  spec:
+    ingressClassName: nginx
+    rules:
+      - host: www.example.com
+        http:
+          paths:
+            - pathType: Prefix
+              backend:
+                service:
+                  name: exampleService
+                  port:
+                    number: 80
+              path: /
+    # This section is only required if TLS is to be enabled for the Ingress
+    tls:
+      - hosts:
+        - www.example.com
+        secretName: example-tls
+
+If TLS is enabled for the Ingress, a Secret containing the certificate and key must also be provided:
+
+  apiVersion: v1
+  kind: Secret
+  metadata:
+    name: example-tls
+    namespace: foo
+  data:
+    tls.crt: <base64 encoded cert>
+    tls.key: <base64 encoded key>
+  type: kubernetes.io/tls
+serhieiev@node1:~/ingress-nginx-helm-chart-4.4.2/charts/ingress-nginx$ sudo kubectl get deploy
+NAME                       READY   UP-TO-DATE   AVAILABLE   AGE
+ingress-nginx-controller   3/3     3            3           6m41s
