@@ -1,0 +1,10 @@
+---
+- name: invoke the role for /etc/iaac for hosts group iaac
+  hosts: iaac
+  roles:
+    - create_file
+
+- name: invoke the role for defining variable for all hosts
+  hosts: all
+  roles:
+    - distro_info
