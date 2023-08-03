@@ -1,0 +1,5 @@
+
+vm-1 ansible_host=#vm-1_ip ansible_ssh_user=ubuntu
+
+
+vm-2 ansible_host=#vm-2_ip ansible_ssh_user=ubuntu

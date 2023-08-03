@@ -1,0 +1,11 @@
+---
+- name: invoke the role harden_with_pam
+  hosts: vm-1
+  roles:
+    - harden_with_pam
+
+- name: invoke the role harden_non_pam
+  hosts: vm-2
+  roles:
+    - harden_non_pam
+
