@@ -1,0 +1,11 @@
+# AWS Variables
+aws_region = "us-east-1"
+aws_ami    = "ami-0a6b2839d44d781b2"
+
+# Azure Variables
+azure_location = "West Europe"
+
+# Common Variables
+ssh_user          = "ubuntu"
+ssh_pub_key_file  = "~/.ssh/id_rsa.pub"
+ssh_priv_key_file = "~/.ssh/id_rsa"
