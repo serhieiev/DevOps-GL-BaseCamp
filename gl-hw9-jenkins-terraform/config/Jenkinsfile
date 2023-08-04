@@ -1,0 +1,29 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building..'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
+    }
+    post {
+        success {
+            slackSend color: 'good', message: "Test Slack notifications build successful!\nBuild link: ${env.BUILD_URL}\nTimestamp: ${new Date().format('yyyy-MM-dd HH:mm:ss')}"
+        }
+        failure {
+            slackSend color: 'danger', message: "Test Slack notifications build failed.\nBuild link: ${env.BUILD_URL}\nTimestamp: ${new Date().format('yyyy-MM-dd HH:mm:ss')}"
+        }
+    }
+}
